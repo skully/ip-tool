@@ -15,6 +15,6 @@ spec:
       containers:
       - name: ip-tool
         image: ip-tool:latest
-        imagePullPolicy: Never
+        #imagePullPolicy: Never # needed for minikube cached images
         command: ["python3", "/app/ip_tool.py"]
 
