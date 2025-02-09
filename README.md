@@ -26,8 +26,3 @@ python ip_tool.py --check-collision subnets.txt
 ```sh
 pytest tests.py -v
 ```
-
----
-
-## 📜 License
-MIT
