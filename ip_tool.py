@@ -121,7 +121,7 @@ def check_collision(file_path: str):
                     subnets.append((identifier, subnet))
 
         if not found:
-            print("Found none")
+            print("No collision found.")
 
     except FileNotFoundError:
         print(f"Error: File '{file_path}' not found.")

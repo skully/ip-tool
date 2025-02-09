@@ -37,7 +37,7 @@ def test_check_collision_no_conflict(tmp_path):
 
     with patch("builtins.print") as mock_print:
         check_collision(str(file_path))
-        mock_print.assert_any_call("Found none")
+        mock_print.assert_any_call("No collision found.")
 
 
 def test_check_collision_with_conflict(tmp_path):
