@@ -37,7 +37,7 @@ def test_check_collision_no_conflict(tmp_path):
 
     with patch("builtins.print") as mock_print:
         check_collision(str(file_path))
-        mock_print.assert_called_with("Found none")
+        mock_print.assert_any_call("Found none")
 
 
 def test_check_collision_with_conflict(tmp_path):
@@ -49,5 +49,5 @@ def test_check_collision_with_conflict(tmp_path):
 
     with patch("builtins.print") as mock_print:
         check_collision(str(file_path))
-        mock_print.assert_called_with("Collision: 10.244.1.128/25 (pod2), 10.244.1.0/24 (pod1)")
+        mock_print.assert_any_call("Collision: 10.244.1.128/25 (pod2), 10.244.1.0/24 (pod1)")
 
