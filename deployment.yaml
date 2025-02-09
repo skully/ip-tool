@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ip-tool
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ip-tool
+  template:
+    metadata:
+      labels:
+        app: ip-tool
+    spec:
+      containers:
+      - name: ip-tool
+        image: ip-tool:latest
+        imagePullPolicy: Never
+        command: ["python3", "/app/ip_tool.py"]
+
