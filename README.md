@@ -11,7 +11,7 @@
 python ip_tool.py
 ```
 
-### **Collect logs from Kubernetes pods using a specific image**
+### **Collect subnets from Kubernetes pods using a specific image: ip-tool:latest**
 ```sh
 python ip_tool.py --collect subnets.txt
 ```
